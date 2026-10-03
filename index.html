@@ -1,186 +1,203 @@
+أكيد، ده **الكود كامل كوبي بيست**، والكلام القديم في الرسالة اتشال واتحط مكانه كلامك الجديد. باقي الموقع زي ما هو.
+
+```html
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>مفاجأة ليكي ❤️</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
 <style>
 *{box-sizing:border-box}
+
 body{
   margin:0;
   background:#fce4ec;
   font-family:'Cairo', Tahoma, Arial, sans-serif;
   color:#49343d;
   min-height:100vh;
-  position: relative;
-  overflow-x: hidden;
+  position:relative;
+  overflow-x:hidden;
 }
 
-/* تأثير القلوب العائمة في الخلفية */
-.hearts-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-.floating-heart {
-  position: absolute;
-  bottom: -50px;
-  color: #ff4081;
-  opacity: 0.6;
-  animation: floatUp 6s linear infinite;
-}
-@keyframes floatUp {
-  0% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
-  100% { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+.hearts-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+  z-index:0;
+  overflow:hidden;
 }
 
-/* خلفية شاشة الدخول المليئة بالقلوب والعبارات */
-#gate-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: radial-gradient(circle at center, #ffebee 0%, #fce4ec 70%, #f8bbd0 100%);
-  z-index: 999;
+.floating-heart{
+  position:absolute;
+  bottom:-50px;
+  color:#ff4081;
+  opacity:0.6;
+  animation:floatUp 6s linear infinite;
 }
 
-/* كارت التسجيل الرئيسي */
-.login-card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border-radius: 28px;
-  padding: 35px 25px;
-  max-width: 440px;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+@keyframes floatUp{
+  0%{
+    transform:translateY(0) rotate(0deg);
+    opacity:0.6;
+  }
+  100%{
+    transform:translateY(-120vh) rotate(360deg);
+    opacity:0;
+  }
 }
 
-.top-hearts {
-  color: #e91e63;
-  font-size: 28px;
-  margin-bottom: 5px;
+#gate-container{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:radial-gradient(circle at center,#ffebee 0%,#fce4ec 70%,#f8bbd0 100%);
+  z-index:999;
 }
 
-.login-card h1 {
-  font-size: 24px;
-  color: #d81b60;
-  margin: 5px 0 15px;
-  font-weight: 700;
+.login-card{
+  background:rgba(255,255,255,0.9);
+  backdrop-filter:blur(8px);
+  border-radius:28px;
+  padding:35px 25px;
+  max-width:440px;
+  width:100%;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(233,30,99,0.12);
+  border:1px solid rgba(255,255,255,0.6);
 }
 
-.intro-desc {
-  color: #775566;
-  font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 15px;
+.top-hearts{
+  color:#e91e63;
+  font-size:28px;
+  margin-bottom:5px;
 }
 
-.names-tag {
-  font-family: 'Dancing Script', cursive;
-  font-size: 26px;
-  color: #d81b60;
-  margin: 15px 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+.login-card h1{
+  font-size:24px;
+  color:#d81b60;
+  margin:5px 0 15px;
+  font-weight:700;
 }
 
-/* حقل الإدخال */
-.input-wrapper {
-  position: relative;
-  max-width: 320px;
-  margin: 0 auto 15px;
+.intro-desc{
+  color:#775566;
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:15px;
 }
 
-.input-wrapper input {
-  width: 100%;
-  padding: 12px 40px;
-  border: 1.5px solid #f8bbd0;
-  border-radius: 25px;
-  background: #fff;
-  font-family: inherit;
-  font-size: 14px;
-  text-align: center;
-  outline: none;
-  transition: all 0.3s;
-  color: #49343d;
+.names-tag{
+  font-family:'Dancing Script',cursive;
+  font-size:26px;
+  color:#d81b60;
+  margin:15px 0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
 }
 
-.input-wrapper input:focus {
-  border-color: #e91e63;
-  box-shadow: 0 0 8px rgba(233, 30, 99, 0.2);
+.input-wrapper{
+  position:relative;
+  max-width:320px;
+  margin:0 auto 15px;
 }
 
-.input-wrapper .icon-lock {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #e91e63;
-  font-size: 14px;
+.input-wrapper input{
+  width:100%;
+  padding:12px 40px;
+  border:1.5px solid #f8bbd0;
+  border-radius:25px;
+  background:#fff;
+  font-family:inherit;
+  font-size:14px;
+  text-align:center;
+  outline:none;
+  transition:all 0.3s;
+  color:#49343d;
 }
 
-.input-wrapper .icon-heart {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #e91e63;
-  font-size: 14px;
+.input-wrapper input:focus{
+  border-color:#e91e63;
+  box-shadow:0 0 8px rgba(233,30,99,0.2);
 }
 
-/* زر الفتح */
-.btn-unlock {
-  background: linear-gradient(135deg, #ec407a, #d81b60);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 12px 40px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 4px 15px rgba(216, 27, 96, 0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
+.input-wrapper .icon-lock{
+  position:absolute;
+  left:15px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#e91e63;
+  font-size:14px;
 }
 
-.btn-unlock:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(216, 27, 96, 0.4);
+.input-wrapper .icon-heart{
+  position:absolute;
+  right:15px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#e91e63;
+  font-size:14px;
 }
 
-.error {
-  color: #c2185b;
-  font-size: 13px;
-  margin-top: 10px;
-  min-height: 20px;
+.btn-unlock{
+  background:linear-gradient(135deg,#ec407a,#d81b60);
+  color:white;
+  border:none;
+  border-radius:25px;
+  padding:12px 40px;
+  font-size:16px;
+  cursor:pointer;
+  box-shadow:0 4px 15px rgba(216,27,96,0.3);
+  transition:transform 0.2s,box-shadow 0.2s;
 }
 
-.bypass-btn {
-  display: block;
-  margin-top: 15px;
-  font-size: 11px;
-  color: #c2185b;
-  text-decoration: underline;
-  cursor: pointer;
-  opacity: 0.5;
+.btn-unlock:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 20px rgba(216,27,96,0.4);
 }
 
-/* باقي أجزاء الموقع بعد التسجيل */
-main{position: relative; z-index: 1; max-width:820px; margin:auto; padding:24px 16px 45px}
-#site{display:none}
+.error{
+  color:#c2185b;
+  font-size:13px;
+  margin-top:10px;
+  min-height:20px;
+}
+
+.bypass-btn{
+  display:block;
+  margin-top:15px;
+  font-size:11px;
+  color:#c2185b;
+  text-decoration:underline;
+  cursor:pointer;
+  opacity:0.5;
+}
+
+main{
+  position:relative;
+  z-index:1;
+  max-width:820px;
+  margin:auto;
+  padding:24px 16px 45px;
+}
+
+#site{
+  display:none;
+}
 
 .card{
   background:#ffffffd9;
@@ -188,298 +205,557 @@ main{position: relative; z-index: 1; max-width:820px; margin:auto; padding:24px 
   border-radius:24px;
   padding:25px;
   margin:18px 0;
-  box-shadow: 0 4px 15px rgba(216, 27, 96, 0.04);
-  transition: all 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(216, 27, 96, 0.12);
+  box-shadow:0 4px 15px rgba(216,27,96,0.04);
+  transition:all 0.3s ease;
 }
 
-.center{text-align:center}
-.heart{color:#d96b8d;font-size:32px;animation:beat 1.5s infinite;display:inline-block}
-@keyframes beat{50%{transform:scale(1.2)}}
-h2{font-size:22px; color:#d81b60; font-weight:700; margin-bottom:20px;}
-.sub{color:#947985;line-height:1.9}
-
-/* بطاقة الرسالة الرئيسية */
-.love-letter-card {
-  background: linear-gradient(135deg, #fffffffa 0%, #fff0f5fa 100%);
-  border: 2px dashed #d81b60;
-  border-radius: 24px;
-  padding: 35px 25px;
-  margin: 18px 0;
-  text-align: center;
-  box-shadow: 0 8px 25px rgba(216, 27, 96, 0.08);
-}
-.love-letter-text {
-  font-size: 22px;
-  color: #d81b60;
-  font-weight: 700;
-  line-height: 1.9;
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 12px 30px rgba(216,27,96,0.12);
 }
 
-/* العداد الزمني */
-.counter{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.center{
+  text-align:center;
+}
+
+.heart{
+  color:#d96b8d;
+  font-size:32px;
+  animation:beat 1.5s infinite;
+  display:inline-block;
+}
+
+@keyframes beat{
+  50%{
+    transform:scale(1.2);
+  }
+}
+
+h2{
+  font-size:22px;
+  color:#d81b60;
+  font-weight:700;
+  margin-bottom:20px;
+}
+
+.sub{
+  color:#947985;
+  line-height:1.9;
+}
+
+.love-letter-card{
+  background:linear-gradient(135deg,#fffffffa 0%,#fff0f5fa 100%);
+  border:2px dashed #d81b60;
+  border-radius:24px;
+  padding:35px 25px;
+  margin:18px 0;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(216,27,96,0.08);
+}
+
+.love-letter-text{
+  font-size:22px;
+  color:#d81b60;
+  font-weight:700;
+  line-height:1.9;
+  white-space:pre-line;
+}
+
+.counter{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
 .unit{
   background:#f9e9ef;
   border-radius:16px;
   padding:16px 6px;
-  border: 1px solid #f3dce5;
-  transition: all 0.3s ease;
-}
-.unit:hover { background: #ffebee; transform: scale(1.05); }
-.unit strong{display:block;font-size:32px;color:#d96b8d; font-weight: 700;}
-.unit span{font-size:13px;color:#947985; font-weight: 600;}
-
-/* ثيم قسم حكايتنا */
-.timeline-theme {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin-top: 15px;
-}
-.story-item {
-  background: linear-gradient(135deg, #fffbfd 0%, #fff5f8 100%);
-  border: 1px solid #fce4ec;
-  border-left: 5px solid #d81b60;
-  border-radius: 16px;
-  padding: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 12px rgba(216, 27, 96, 0.04);
-  transition: all 0.3s ease;
-}
-.story-item:hover {
-  transform: translateX(-5px);
-  background: linear-gradient(135deg, #fff5f8 0%, #ffebee 100%);
-}
-.story-text { font-size: 16px; font-weight: 600; color: #49343d; }
-.story-date {
-  font-size: 14px;
-  font-weight: 700;
-  color: #d81b60;
-  background: #ffebee;
-  padding: 4px 12px;
-  border-radius: 20px;
+  border:1px solid #f3dce5;
+  transition:all 0.3s ease;
 }
 
-/* ألبوم الصور المنظم */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-top: 15px;
-}
-.photo-card {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  aspect-ratio: 3 / 4;
-  background: linear-gradient(135deg, #f8bbd0, #fce4ec);
-  transition: all 0.3s ease;
-}
-.photo-card img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 2;
-}
-.photo-placeholder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #c2185b;
-  font-size: 15px;
-  font-weight: 600;
-  padding: 10px;
-  text-align: center;
-  z-index: 1;
+.unit:hover{
+  background:#ffebee;
+  transform:scale(1.05);
 }
 
-audio{width:100%; border-radius: 12px;}
-footer {text-align:center; color:#d81b60; font-size:16px; font-weight: 700; margin-top: 25px; padding-bottom: 20px;}
+.unit strong{
+  display:block;
+  font-size:32px;
+  color:#d96b8d;
+  font-weight:700;
+}
+
+.unit span{
+  font-size:13px;
+  color:#947985;
+  font-weight:600;
+}
+
+.timeline-theme{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  margin-top:15px;
+}
+
+.story-item{
+  background:linear-gradient(135deg,#fffbfd 0%,#fff5f8 100%);
+  border:1px solid #fce4ec;
+  border-left:5px solid #d81b60;
+  border-radius:16px;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 12px rgba(216,27,96,0.04);
+  transition:all 0.3s ease;
+}
+
+.story-item:hover{
+  transform:translateX(-5px);
+  background:linear-gradient(135deg,#fff5f8 0%,#ffebee 100%);
+}
+
+.story-text{
+  font-size:16px;
+  font-weight:600;
+  color:#49343d;
+}
+
+.story-date{
+  font-size:14px;
+  font-weight:700;
+  color:#d81b60;
+  background:#ffebee;
+  padding:4px 12px;
+  border-radius:20px;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+  margin-top:15px;
+}
+
+.photo-card{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  aspect-ratio:3 / 4;
+  background:linear-gradient(135deg,#f8bbd0,#fce4ec);
+  transition:all 0.3s ease;
+}
+
+.photo-card img{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:2;
+}
+
+.photo-placeholder{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:#c2185b;
+  font-size:15px;
+  font-weight:600;
+  padding:10px;
+  text-align:center;
+  z-index:1;
+}
+
+audio{
+  width:100%;
+  border-radius:12px;
+}
+
+footer{
+  text-align:center;
+  color:#d81b60;
+  font-size:16px;
+  font-weight:700;
+  margin-top:25px;
+  padding-bottom:20px;
+}
 
 @media(max-width:480px){
-  .counter{grid-template-columns:repeat(2,1fr)}
-  .gallery{grid-template-columns: 1fr}
-  .story-item { flex-direction: column; gap: 8px; text-align: center; }
+  .counter{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .story-item{
+    flex-direction:column;
+    gap:8px;
+    text-align:center;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <div class="hearts-container" id="hearts-container"></div>
 
-<!-- شاشة الباسورد تم إصلاحها وتأمينها بالكامل -->
+<!-- شاشة الباسورد -->
 <div id="gate-container">
   <div class="login-card">
+
     <div class="top-hearts">♥</div>
+
     <h1>أهلاً... في عالمنا ♥</h1>
+
     <p class="intro-desc">
       كل ما بينا هنا... مش مجرد كلام،<br>
       ده أحلى تفاصيل حياتي معاك،<br>
       ضحكتك، وجودك، اهتمامك، طريقتك.
     </p>
-    <div style="color:#e91e63; margin-bottom: 10px;">♥</div>
-    <div class="names-tag">♥ Zozi & Mon ♥</div>
+
+    <div style="color:#e91e63; margin-bottom:10px;">♥</div>
+
+    <div class="names-tag">
+      ♥ Zozi & Mon ♥
+    </div>
 
     <form id="login">
+
       <div class="input-wrapper">
+
         <span class="icon-lock">🔒</span>
-        <input id="pass" type="text" placeholder="اكتبي الباسورد السري..." aria-label="كلمة السر" autocomplete="off">
+
+        <input
+          id="pass"
+          type="text"
+          placeholder="اكتبي الباسورد السري..."
+          aria-label="كلمة السر"
+          autocomplete="off"
+        >
+
         <span class="icon-heart">♥</span>
+
       </div>
-      <button type="submit" class="btn-unlock">Unlock ♥</button>
+
+      <button type="submit" class="btn-unlock">
+        Unlock ♥
+      </button>
+
       <p class="error" id="error"></p>
-      <!-- زر الطوارئ الاحتياطي للفتح السريع -->
-      <span class="bypass-btn" onclick="unlockSite()"> (اضغط هنا للفتح السريع) </span>
+
+      <span class="bypass-btn" onclick="unlockSite()">
+        (اضغط هنا للفتح السريع)
+      </span>
+
     </form>
+
   </div>
 </div>
 
 <!-- المحتوى بعد الفتح -->
 <div id="site">
+
   <main>
+
+    <!-- الرسالة الجديدة -->
     <section class="love-letter-card">
-      <div class="heart" style="font-size:36px; margin-bottom:10px;">♥</div>
-      <p class="love-letter-text">انتي لو فتحتي الويب سايت دلوقتي ومرجعناش عايزك تعرفي اني حبيتك من كل قلبي لحد دلوقتي برضه هاجي اتقدم عشان انا وعدتك بكده لو انتي فتحتيها بقي وشوفتي كلام ده ابقي قوليلي بس انا عايز اعرف السبب اليخلاكي تسيبني كده و
-بحبك والله ومقدرش ابص ولا اشوف غيرك ف الدنيا  ♥      </p>
+
+      <div class="heart" style="font-size:36px; margin-bottom:10px;">
+        ♥
+      </div>
+
+      <p class="love-letter-text">مهما حاولت أوصفلك قد إيه
+أنا بحبك مش هعرف أوصف الإحساس ده بس كل اللي أعرف أقولهولك إنك أجمل وأحسن حاجه أنا شوفتها في حياتي ولو الزمن رجع بيا هحبك نفس الحب اللي حبتهولك</p>
+
     </section>
 
     <section class="card center">
+
       <h2>بدايتنا كانت يوم 29/5/2026</h2>
+
       <div class="counter">
-        <div class="unit"><strong id="days">0</strong><span>يوم</span></div>
-        <div class="unit"><strong id="hours">0</strong><span>ساعة</span></div>
-        <div class="unit"><strong id="minutes">0</strong><span>دقيقة</span></div>
-        <div class="unit"><strong id="seconds">0</strong><span>ثانية</span></div>
+
+        <div class="unit">
+          <strong id="days">0</strong>
+          <span>يوم</span>
+        </div>
+
+        <div class="unit">
+          <strong id="hours">0</strong>
+          <span>ساعة</span>
+        </div>
+
+        <div class="unit">
+          <strong id="minutes">0</strong>
+          <span>دقيقة</span>
+        </div>
+
+        <div class="unit">
+          <strong id="seconds">0</strong>
+          <span>ثانية</span>
+        </div>
+
       </div>
+
     </section>
 
     <section class="card">
+
       <h2 class="center">حكايتنا 💞</h2>
+
       <div class="timeline-theme">
+
         <div class="story-item">
-          <div class="story-text">أول يوم مع بعض وبداية الحكاية.</div>
-          <div class="story-date">29 مايو 2026</div>
+
+          <div class="story-text">
+            أول يوم مع بعض وبداية الحكاية.
+          </div>
+
+          <div class="story-date">
+            29 مايو 2026
+          </div>
+
         </div>
+
         <div class="story-item">
-          <div class="story-text">يوم اعترفتلك بحبي ليكي.</div>
-          <div class="story-date">16 يوليو 2026</div>
+
+          <div class="story-text">
+            يوم اعترفتلك بحبي ليكي.
+          </div>
+
+          <div class="story-date">
+            16 يوليو 2026
+          </div>
+
         </div>
+
         <div class="story-item">
-          <div class="story-text">اول خروجة لينا سوه.</div>
-          <div class="story-date">6 أغسطس 2026</div>
+
+          <div class="story-text">
+            اول خروجة لينا سوه.
+          </div>
+
+          <div class="story-date">
+            6 أغسطس 2026
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
     <section class="card center">
+
       <h2>أغنيتنا 🎵</h2>
+
       <audio id="ourSong" loop>
         <source src="song.mp3?v=2" type="audio/mpeg">
       </audio>
+
     </section>
 
     <section class="card">
+
       <h2 class="center">ألبوم ذكرياتنا 📸</h2>
+
       <div class="gallery">
+
         <div class="photo-card">
-          <div class="photo-placeholder">❤️<br>ذكرى حلوة سوا</div>
-          <img src="pic1.jpg" onerror="this.src='pic1.png'; this.onerror=function(){this.src='pic1.jpeg'; this.onerror=null;};">
+          <div class="photo-placeholder">
+            ❤️<br>
+            ذكرى حلوة سوا
+          </div>
+
+          <img
+            src="pic1.jpg"
+            onerror="this.src='pic1.png'; this.onerror=function(){this.src='pic1.jpeg'; this.onerror=null;};"
+          >
         </div>
+
         <div class="photo-card">
-          <div class="photo-placeholder">❤️<br>ذكرى حلوة سوا</div>
-          <img src="pic2.jpg" onerror="this.src='pic2.png'; this.onerror=function(){this.src='pic2.jpeg'; this.onerror=null;};">
+          <div class="photo-placeholder">
+            ❤️<br>
+            ذكرى حلوة سوا
+          </div>
+
+          <img
+            src="pic2.jpg"
+            onerror="this.src='pic2.png'; this.onerror=function(){this.src='pic2.jpeg'; this.onerror=null;};"
+          >
         </div>
+
         <div class="photo-card">
-          <div class="photo-placeholder">❤️<br>ذكرى حلوة سوا</div>
-          <img src="pic3.jpg" onerror="this.src='pic3.png'; this.onerror=function(){this.src='pic3.jpeg'; this.onerror=null;};">
+          <div class="photo-placeholder">
+            ❤️<br>
+            ذكرى حلوة سوا
+          </div>
+
+          <img
+            src="pic3.jpg"
+            onerror="this.src='pic3.png'; this.onerror=function(){this.src='pic3.jpeg'; this.onerror=null;};"
+          >
         </div>
+
         <div class="photo-card">
-          <div class="photo-placeholder">❤️<br>ذكرى حلوة سوا</div>
-          <img src="pic4.jpg" onerror="this.src='pic4.png'; this.onerror=function(){this.src='pic4.jpeg'; this.onerror=null;};">
+          <div class="photo-placeholder">
+            ❤️<br>
+            ذكرى حلوة سوا
+          </div>
+
+          <img
+            src="pic4.jpg"
+            onerror="this.src='pic4.png'; this.onerror=function(){this.src='pic4.jpeg'; this.onerror=null;};"
+          >
         </div>
+
       </div>
+
     </section>
 
-    <footer>Zozi & Mon ♥</footer>
+    <footer>
+      Zozi & Mon ♥
+    </footer>
+
   </main>
+
 </div>
 
 <script>
+
 /* ===== الباسورد ===== */
+
 const correctPassword = "Treasure";
 
 document.getElementById('login').addEventListener('submit', function(e){
+
   e.preventDefault();
+
   const entered = document.getElementById('pass').value.trim();
-  if (entered === correctPassword) {
+
+  if(entered === correctPassword){
+
     unlockSite();
-  } else {
-    document.getElementById('error').textContent = 'الباسورد غلط، جرب تاني ♥';
+
+  }else{
+
+    document.getElementById('error').textContent =
+      'الباسورد غلط، جرب تاني ♥';
+
   }
+
 });
 
 function unlockSite(){
+
   document.getElementById('gate-container').style.display = 'none';
+
   document.getElementById('site').style.display = 'block';
 
   const song = document.getElementById('ourSong');
-  if (song) {
+
+  if(song){
+
     song.play().catch(() => {
-      /* لو المتصفح منع التشغيل التلقائي، هتشتغل أول ما تدوس في أي حتة بالصفحة */
-      document.body.addEventListener('click', () => song.play(), { once: true });
+
+      document.body.addEventListener(
+        'click',
+        () => song.play(),
+        {once:true}
+      );
+
     });
+
   }
+
 }
 
+
 /* ===== العداد الزمني ===== */
+
 const startDate = new Date('2026-05-29T00:00:00');
 
 function updateCounter(){
-  const now = new Date();
-  let diff = now - startDate;
-  if (diff < 0) diff = 0;
 
-  const days = Math.floor(diff / (1000*60*60*24));
-  const hours = Math.floor((diff / (1000*60*60)) % 24);
-  const minutes = Math.floor((diff / (1000*60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  const now = new Date();
+
+  let diff = now - startDate;
+
+  if(diff < 0) diff = 0;
+
+  const days =
+    Math.floor(diff / (1000 * 60 * 60 * 24));
+
+  const hours =
+    Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+  const minutes =
+    Math.floor((diff / (1000 * 60)) % 60);
+
+  const seconds =
+    Math.floor((diff / 1000) % 60);
 
   document.getElementById('days').textContent = days;
+
   document.getElementById('hours').textContent = hours;
+
   document.getElementById('minutes').textContent = minutes;
+
   document.getElementById('seconds').textContent = seconds;
+
 }
-setInterval(updateCounter, 1000);
+
+setInterval(updateCounter,1000);
+
 updateCounter();
 
+
 /* ===== القلوب العائمة ===== */
+
 function createFloatingHeart(){
+
   const heart = document.createElement('div');
+
   heart.className = 'floating-heart';
+
   heart.textContent = '♥';
-  heart.style.left = Math.random() * 100 + 'vw';
-  heart.style.fontSize = (14 + Math.random() * 18) + 'px';
-  heart.style.animationDuration = (5 + Math.random() * 4) + 's';
-  document.getElementById('hearts-container').appendChild(heart);
-  setTimeout(() => heart.remove(), 9000);
+
+  heart.style.left =
+    Math.random() * 100 + 'vw';
+
+  heart.style.fontSize =
+    (14 + Math.random() * 18) + 'px';
+
+  heart.style.animationDuration =
+    (5 + Math.random() * 4) + 's';
+
+  document
+    .getElementById('hearts-container')
+    .appendChild(heart);
+
+  setTimeout(() => heart.remove(),9000);
+
 }
-setInterval(createFloatingHeart, 600);
+
+setInterval(createFloatingHeart,600);
+
 </script>
 
 </body>
 </html>
+```
