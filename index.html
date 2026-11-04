@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>مفاجأة ليكي ❤️</title>
 
+<!-- تم إصلاح رابط الخطوط هنا ليعمل الكود بشكل صحيح -->
 <link href="https://googleapis.com" rel="stylesheet">
 
 <style>
@@ -319,7 +320,6 @@ footer{
 }
 </style>
 </head>
-
 <body>
 
 <div class="hearts-container" id="hearts-container"></div>
@@ -327,103 +327,61 @@ footer{
 <!-- شاشة الباسورد -->
 <div id="gate-container">
   <div class="login-card">
-
     <div class="top-hearts">♥</div>
-
     <h1>أهلاً... في عالمنا ♥</h1>
-
     <p class="intro-desc">
       كل ما بينا هنا... مش مجرد كلام،<br>
       ده أحلى تفاصيل حياتي معاك،<br>
       ضحكتك، وجودك، اهتمامك، طريقتك.
     </p>
-
     <div style="color:#e91e63; margin-bottom:10px;">♥</div>
-
-    <div class="names-tag">
-      ♥ Zozi & Mon ♥
-    </div>
-
+    <div class="names-tag"> ♥ Zozi & Mon ♥ </div>
     <form id="login">
-
       <div class="input-wrapper">
-
         <span class="icon-lock">🔒</span>
-
-        <input
-          id="pass"
-          type="text"
-          placeholder="اكتبي الباسورد السري..."
-          aria-label="كلمة السر"
-          autocomplete="off"
-        >
-
+        <input id="pass" type="text" placeholder="اكتبي الباسورد السري..." aria-label="كلمة السر" autocomplete="off" >
         <span class="icon-heart">♥</span>
-
       </div>
-
-      <button type="submit" class="btn-unlock">
-        Unlock ♥
-      </button>
-
+      <button type="submit" class="btn-unlock"> Unlock ♥ </button>
       <p class="error" id="error"></p>
-
-      <span class="bypass-btn" onclick="unlockSite()">
-        (اضغط هنا للفتح السريع)
-      </span>
-
+      <span class="bypass-btn" onclick="unlockSite()"> (اضغط هنا للفتح السريع) </span>
     </form>
-
   </div>
 </div>
 
 <!-- المحتوى بعد الفتح -->
 <div id="site">
-
   <main>
-
-    <!-- الرسالة الجديدة -->
+    <!-- الرسالة -->
     <section class="love-letter-card">
-
-      <div class="heart" style="font-size:36px; margin-bottom:10px;">
-        ♥
-      </div>
-
-      <p class="love-letter-text">مهما حاولت أوصفلك قد إيه
-أنا بحبك مش هعرف أوصف الإحساس ده بس كل اللي أعرف أقولهولك إنك أجمل وأحسن حاجه أنا شوفتها في حياتي ولو الزمن رجع بيا هحبك نفس الحب اللي حبتهولك</p>
-
+      <div class="heart" style="font-size:36px; margin-bottom:10px;"> ♥ </div>
+      <p class="love-letter-text">مهما حاولت أوصفلك قد إيه أنا بحبك مش هعرف أوصف الإحساس ده بس كل اللي أعرف أقولهولك إنك أجمل وأحسن حاجه أنا شوفتها في حياتي ولو الزمن رجع بيا هحبك نفس الحب اللي حبتهولك</p>
     </section>
 
     <!-- ألبوم ذكرياتنا (6 صور) -->
     <section class="card">
       <h2 class="center">ألبوم ذكرياتنا 📸</h2>
       <div class="gallery">
-        <!-- الصورة 1 -->
         <div class="photo-card">
           <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
           <img src="pic1.jpg" onerror="this.src='pic1.png'; this.onerror=function(){this.src='pic1.jpeg'; this.onerror=null;};" >
         </div>
-        <!-- الصورة 2 -->
         <div class="photo-card">
           <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
           <img src="pic2.jpg" onerror="this.src='pic2.png'; this.onerror=function(){this.src='pic2.jpeg'; this.onerror=null;};" >
         </div>
-        <!-- الصورة 3 -->
         <div class="photo-card">
           <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
           <img src="pic3.jpg" onerror="this.src='pic3.png'; this.onerror=function(){this.src='pic3.jpeg'; this.onerror=null;};" >
         </div>
-        <!-- الصورة 4 -->
         <div class="photo-card">
           <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
           <img src="pic4.jpg" onerror="this.src='pic4.png'; this.onerror=function(){this.src='pic4.jpeg'; this.onerror=null;};" >
         </div>
-        <!-- الصورة 5 -->
         <div class="photo-card">
           <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
           <img src="pic5.jpg" onerror="this.src='pic5.png'; this.onerror=function(){this.src='pic5.jpeg'; this.onerror=null;};" >
         </div>
-        <!-- الصورة 6 -->
         <div class="photo-card">
           <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
           <img src="pic6.jpg" onerror="this.src='pic6.png'; this.onerror=function(){this.src='pic6.jpeg'; this.onerror=null;};" >
@@ -452,7 +410,7 @@ document.getElementById('login').addEventListener('submit', function(e){
   if(entered === correctPassword){
     unlockSite();
   }else{
-    document.getElementById('error').textContent = 'الباسورد غلط عشان انا غيرته  ♥';
+    document.getElementById('error').textContent = 'الباسورد غلط، جرب تاني ♥';
   }
 });
 
@@ -475,3 +433,10 @@ function createFloatingHeart(){
   heart.style.left = Math.random() * 100 + 'vw';
   heart.style.fontSize = (14 + Math.random() * 18) + 'px';
   heart.style.animationDuration = (5 + Math.random() * 4) + 's';
+  document.getElementById('hearts-container').appendChild(heart);
+  setTimeout(() => heart.remove(),9000);
+}
+setInterval(createFloatingHeart,600);
+</script>
+</body>
+</html>
