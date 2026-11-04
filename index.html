@@ -1,5 +1,3 @@
-
-```html
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
@@ -7,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>مفاجأة ليكي ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<link href="https://googleapis.com" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
@@ -237,11 +235,6 @@ h2{
   margin-bottom:20px;
 }
 
-.sub{
-  color:#947985;
-  line-height:1.9;
-}
-
 .love-letter-card{
   background:linear-gradient(135deg,#fffffffa 0%,#fff0f5fa 100%);
   border:2px dashed #d81b60;
@@ -258,78 +251,6 @@ h2{
   font-weight:700;
   line-height:1.9;
   white-space:pre-line;
-}
-
-.counter{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-}
-
-.unit{
-  background:#f9e9ef;
-  border-radius:16px;
-  padding:16px 6px;
-  border:1px solid #f3dce5;
-  transition:all 0.3s ease;
-}
-
-.unit:hover{
-  background:#ffebee;
-  transform:scale(1.05);
-}
-
-.unit strong{
-  display:block;
-  font-size:32px;
-  color:#d96b8d;
-  font-weight:700;
-}
-
-.unit span{
-  font-size:13px;
-  color:#947985;
-  font-weight:600;
-}
-
-.timeline-theme{
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  margin-top:15px;
-}
-
-.story-item{
-  background:linear-gradient(135deg,#fffbfd 0%,#fff5f8 100%);
-  border:1px solid #fce4ec;
-  border-left:5px solid #d81b60;
-  border-radius:16px;
-  padding:18px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  box-shadow:0 4px 12px rgba(216,27,96,0.04);
-  transition:all 0.3s ease;
-}
-
-.story-item:hover{
-  transform:translateX(-5px);
-  background:linear-gradient(135deg,#fff5f8 0%,#ffebee 100%);
-}
-
-.story-text{
-  font-size:16px;
-  font-weight:600;
-  color:#49343d;
-}
-
-.story-date{
-  font-size:14px;
-  font-weight:700;
-  color:#d81b60;
-  background:#ffebee;
-  padding:4px 12px;
-  border-radius:20px;
 }
 
 .gallery{
@@ -392,18 +313,8 @@ footer{
 }
 
 @media(max-width:480px){
-  .counter{
-    grid-template-columns:repeat(2,1fr);
-  }
-
   .gallery{
     grid-template-columns:1fr;
-  }
-
-  .story-item{
-    flex-direction:column;
-    gap:8px;
-    text-align:center;
   }
 }
 </style>
@@ -483,278 +394,84 @@ footer{
 
     </section>
 
-    <section class="card center">
-
-      <h2>بدايتنا كانت يوم 29/5/2026</h2>
-
-      <div class="counter">
-
-        <div class="unit">
-          <strong id="days">0</strong>
-          <span>يوم</span>
-        </div>
-
-        <div class="unit">
-          <strong id="hours">0</strong>
-          <span>ساعة</span>
-        </div>
-
-        <div class="unit">
-          <strong id="minutes">0</strong>
-          <span>دقيقة</span>
-        </div>
-
-        <div class="unit">
-          <strong id="seconds">0</strong>
-          <span>ثانية</span>
-        </div>
-
-      </div>
-
-    </section>
-
+    <!-- ألبوم ذكرياتنا (6 صور) -->
     <section class="card">
-
-      <h2 class="center">حكايتنا 💞</h2>
-
-      <div class="timeline-theme">
-
-        <div class="story-item">
-
-          <div class="story-text">
-            أول يوم مع بعض وبداية الحكاية.
-          </div>
-
-          <div class="story-date">
-            29 مايو 2026
-          </div>
-
+      <h2 class="center">ألبوم ذكرياتنا 📸</h2>
+      <div class="gallery">
+        <!-- الصورة 1 -->
+        <div class="photo-card">
+          <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
+          <img src="pic1.jpg" onerror="this.src='pic1.png'; this.onerror=function(){this.src='pic1.jpeg'; this.onerror=null;};" >
         </div>
-
-        <div class="story-item">
-
-          <div class="story-text">
-            يوم اعترفتلك بحبي ليكي.
-          </div>
-
-          <div class="story-date">
-            16 يوليو 2026
-          </div>
-
+        <!-- الصورة 2 -->
+        <div class="photo-card">
+          <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
+          <img src="pic2.jpg" onerror="this.src='pic2.png'; this.onerror=function(){this.src='pic2.jpeg'; this.onerror=null;};" >
         </div>
-
-        <div class="story-item">
-
-          <div class="story-text">
-            اول خروجة لينا سوه.
-          </div>
-
-          <div class="story-date">
-            6 أغسطس 2026
-          </div>
-
+        <!-- الصورة 3 -->
+        <div class="photo-card">
+          <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
+          <img src="pic3.jpg" onerror="this.src='pic3.png'; this.onerror=function(){this.src='pic3.jpeg'; this.onerror=null;};" >
         </div>
-
+        <!-- الصورة 4 -->
+        <div class="photo-card">
+          <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
+          <img src="pic4.jpg" onerror="this.src='pic4.png'; this.onerror=function(){this.src='pic4.jpeg'; this.onerror=null;};" >
+        </div>
+        <!-- الصورة 5 -->
+        <div class="photo-card">
+          <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
+          <img src="pic5.jpg" onerror="this.src='pic5.png'; this.onerror=function(){this.src='pic5.jpeg'; this.onerror=null;};" >
+        </div>
+        <!-- الصورة 6 -->
+        <div class="photo-card">
+          <div class="photo-placeholder"> ❤️<br> ذكرى حلوة سوا </div>
+          <img src="pic6.jpg" onerror="this.src='pic6.png'; this.onerror=function(){this.src='pic6.jpeg'; this.onerror=null;};" >
+        </div>
       </div>
-
     </section>
 
+    <!-- الأغنية -->
     <section class="card center">
-
       <h2>أغنيتنا 🎵</h2>
-
       <audio id="ourSong" loop>
         <source src="song.mp3?v=2" type="audio/mpeg">
       </audio>
-
     </section>
 
-    <section class="card">
-
-      <h2 class="center">ألبوم ذكرياتنا 📸</h2>
-
-      <div class="gallery">
-
-        <div class="photo-card">
-          <div class="photo-placeholder">
-            ❤️<br>
-            ذكرى حلوة سوا
-          </div>
-
-          <img
-            src="pic1.jpg"
-            onerror="this.src='pic1.png'; this.onerror=function(){this.src='pic1.jpeg'; this.onerror=null;};"
-          >
-        </div>
-
-        <div class="photo-card">
-          <div class="photo-placeholder">
-            ❤️<br>
-            ذكرى حلوة سوا
-          </div>
-
-          <img
-            src="pic2.jpg"
-            onerror="this.src='pic2.png'; this.onerror=function(){this.src='pic2.jpeg'; this.onerror=null;};"
-          >
-        </div>
-
-        <div class="photo-card">
-          <div class="photo-placeholder">
-            ❤️<br>
-            ذكرى حلوة سوا
-          </div>
-
-          <img
-            src="pic3.jpg"
-            onerror="this.src='pic3.png'; this.onerror=function(){this.src='pic3.jpeg'; this.onerror=null;};"
-          >
-        </div>
-
-        <div class="photo-card">
-          <div class="photo-placeholder">
-            ❤️<br>
-            ذكرى حلوة سوا
-          </div>
-
-          <img
-            src="pic4.jpg"
-            onerror="this.src='pic4.png'; this.onerror=function(){this.src='pic4.jpeg'; this.onerror=null;};"
-          >
-        </div>
-
-      </div>
-
-    </section>
-
-    <footer>
-      Zozi & Mon ♥
-    </footer>
-
+    <footer> Zozi & Mon ♥ </footer>
   </main>
-
 </div>
 
 <script>
-
 /* ===== الباسورد ===== */
-
-const correctPassword = "EZ152115";
-
+const correctPassword = "Treasure";
 document.getElementById('login').addEventListener('submit', function(e){
-
   e.preventDefault();
-
   const entered = document.getElementById('pass').value.trim();
-
   if(entered === correctPassword){
-
     unlockSite();
-
   }else{
-
-    document.getElementById('error').textContent =
-      'بتكتبي صح بس انا الغيرت باسورد ♥';
-
+    document.getElementById('error').textContent = 'الباسورد غلط، جرب تاني ♥';
   }
-
 });
 
 function unlockSite(){
-
   document.getElementById('gate-container').style.display = 'none';
-
   document.getElementById('site').style.display = 'block';
-
   const song = document.getElementById('ourSong');
-
   if(song){
-
     song.play().catch(() => {
-
-      document.body.addEventListener(
-        'click',
-        () => song.play(),
-        {once:true}
-      );
-
+      document.body.addEventListener( 'click', () => song.play(), {once:true} );
     });
-
   }
-
 }
-
-
-/* ===== العداد الزمني ===== */
-
-const startDate = new Date('2026-05-29T00:00:00');
-
-function updateCounter(){
-
-  const now = new Date();
-
-  let diff = now - startDate;
-
-  if(diff < 0) diff = 0;
-
-  const days =
-    Math.floor(diff / (1000 * 60 * 60 * 24));
-
-  const hours =
-    Math.floor((diff / (1000 * 60 * 60)) % 24);
-
-  const minutes =
-    Math.floor((diff / (1000 * 60)) % 60);
-
-  const seconds =
-    Math.floor((diff / 1000) % 60);
-
-  document.getElementById('days').textContent = days;
-
-  document.getElementById('hours').textContent = hours;
-
-  document.getElementById('minutes').textContent = minutes;
-
-  document.getElementById('seconds').textContent = seconds;
-
-}
-
-setInterval(updateCounter,1000);
-
-updateCounter();
-
 
 /* ===== القلوب العائمة ===== */
-
 function createFloatingHeart(){
-
   const heart = document.createElement('div');
-
   heart.className = 'floating-heart';
-
   heart.textContent = '♥';
-
-  heart.style.left =
-    Math.random() * 100 + 'vw';
-
-  heart.style.fontSize =
-    (14 + Math.random() * 18) + 'px';
-
-  heart.style.animationDuration =
-    (5 + Math.random() * 4) + 's';
-
-  document
-    .getElementById('hearts-container')
-    .appendChild(heart);
-
-  setTimeout(() => heart.remove(),9000);
-
-}
-
-setInterval(createFloatingHeart,600);
-
-</script>
-
-</body>
-</html>
-```
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (14 + Math.random() * 18) + 'px';
+  heart.style.animationDuration = (5 + Math.random() * 4) + 's';
